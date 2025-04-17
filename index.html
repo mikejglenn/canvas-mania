@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<title>Metroid &#8211; 30th anniversary remake</title>
+</head>
+
+<body class="home blog custom-background" itemscope itemtype="http://schema.org/WebPage">
+<style>
+#container {
+	max-width: 768px;
+	margin: 0 auto;
+}
+p.controls {
+	display: inline;
+}
+</style>
+<div id="container">
+		<div id="game"></div>
+		<p class='controls'>Controls: Z or Y- Jump, X - Shoot, C - Toggle Missile, Arrow keys - Movement</p> ||| <p class='controls' style='font-weight: bold; cursor: pointer;' onClick='toggleFullscreen()'>Toggle fullscreen</p>
+		<script>
+		function toggleFullscreen(){
+			if (metroid.game.scale.isFullScreen) {
+			metroid.game.scale.stopFullScreen();
+		} else {
+			metroid.game.scale.startFullScreen(false);
+		}
+	}
+		</script>
+
+	<script src="/game/phaser.2.6.1.min.js"></script>
+	<!--<script src="/game/multiObjectCamera/Camera.js"></script>-->
+	<!--<script src="multiObjectCamera/Body.js"></script>-->
+	<script src="/game/dat.gui.js"></script>
+<script src="/game/plugins/Phaser-Virtual-Joystick-Plugin-v1/dist/joystick.js" type="text/javascript"></script>
+<script src="/game/scripts/game.js"></script>
+</div>
+</body>
+</html>

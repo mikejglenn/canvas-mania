@@ -4224,7 +4224,8 @@
                     this.game.isLive = true;
                     /*MJG*/
                     if (this.game.isLive) {
-                        this.load.path = "/game/";
+                        //this.load.path = "/game/";
+                        this.load.path = "game/";
                     } else {
                         //    this.load.path = "/";
                         //thisloadpath = "";
@@ -9709,7 +9710,8 @@
                 key: 'toggle16bit',
                 value: function toggle16bit(value) {
                     console.log(this);
-                    metroid.map.tilesets[0].image.src = (metroid.game.isLive ? "/game" : "") + "/maps/metroid-tileset" + (value ? "-16bit" : "") + ".png";
+                    //metroid.map.tilesets[0].image.src = (metroid.game.isLive ? "/game" : "") + "/maps/metroid-tileset" + (value ? "-16bit" : "") + ".png";
+                    metroid.map.tilesets[0].image.src = (metroid.game.isLive ? "game" : "") + "/maps/metroid-tileset" + (value ? "-16bit" : "") + ".png";
                     console.log(metroid.map.tilesets[0].image.src); /////MJG
                     metroid.map.groundLayer.dirty = true;
                     setTimeout(function() {
